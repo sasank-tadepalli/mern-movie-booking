@@ -66,15 +66,14 @@ function SeatSelection(props) {
   return (
     <div className={classes.seat_selection}>
       <MovieInfo
-        movie_name="Harry Potter"
-        movie_theater="AMC NewPark 12"
-        movie_date="Wednesday, 26 Jan, 2024"
-        movie_time="10:00 AM"
-        movie_image="https://i.ebayimg.com/images/g/Bo8AAOSwrLZjJjso/s-l1600.jpg"
-        selectedSeats={selectedSeats}
+        movie_name={movie_name}
+        movie_theater={movie_theater}
+        movie_date={movie_date}
+        movie_time={movie_time}
+        movie_image={movie_image}
         number_of_tickets={selectedSeats.size}
       />
-      {Seats}
+      <div className={classes.seats}>{Seats}</div>
     </div>
   );
 }

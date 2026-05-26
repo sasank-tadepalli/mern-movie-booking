@@ -19,8 +19,20 @@ function MovieInfo(props) {
           {props.movie_theater} | {props.movie_date} {props.movie_time}
         </p>
       </span>
-      <span>
-        <p>{props.number_of_tickets}</p>
+      <span className={classes.last_span}>
+        <p>
+          {props.number_of_tickets} Ticket
+          {props.number_of_tickets !== 1 ? "s" : ""}
+        </p>
+        <button
+          disabled={props.number_of_tickets === 0}
+          className={
+            props.number_of_tickets === 0 ? classes.button_disabled : null
+          }
+          onClick={() => alert("Hi")}
+        >
+          Pay Now
+        </button>
       </span>
     </div>
   );
